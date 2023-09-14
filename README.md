@@ -145,7 +145,7 @@ user@ros-computer: rosrun f1tenth-sim keyboard_teleop.py car_1
 Click the terminal where the keyboard_teleop node is running, and press your keyboards to control your vehicle.
 
 - w a d s : forward, left, right, backward
-- space_bar : brack 
+- space_bar : brake 
 
 ### Sensor inputs
 You can get RGB-pointcloud and omage topics from realsense D435 from the simulation.
