@@ -127,10 +127,12 @@ To run the simulator on its own, run:
 This will launch everything you need for a full simulation; roscore, the simulator, a preselected map, a model of the racecar and the joystick server.
 
 You can change the gazebo world map by modifying the 'world_name' argument in the simulator.launch file.
+You can choose world with and without the obstacels.
 
-
-<img src="./tutorial/pics/gazebo_oval_track.png"> 
-<img src="./tutorial/pics/track_catia_2.png">
+<figure class="half">
+  <a href="link"><img src="./pics/track.png" height="400"> </a>
+  <a href="link"><img src="./pics/track_with_obs.png" height="400"></a>
+</figure>
 
 ### Manually control the vehicle in the simulator
 
@@ -145,4 +147,7 @@ Click the terminal where the keyboard_teleop node is running, and press your key
 - w a d s : forward, left, right, backward
 - space_bar : brack 
 
-
+### Sensor inputs
+You can get RGB-pointcloud and omage topics from realsense D435 from the simulation.
+<img src="./pics/sensor_env.png" width="200">
+<img src="./pics/rviz_rqt.png" width="200">
