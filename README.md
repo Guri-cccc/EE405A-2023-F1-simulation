@@ -129,10 +129,10 @@ This will launch everything you need for a full simulation; roscore, the simulat
 You can change the gazebo world map by modifying the 'world_name' argument in the simulator.launch file.
 You can choose world with and without the obstacels.
 
-<figure class="half">
-  <a href="link"><img src="./pics/track.png" height="400"> </a>
-  <a href="link"><img src="./pics/track_with_obs.png" height="400"></a>
-</figure>
+<p align="center">
+  <img src="./pics/track.png" align="center" width="32%">
+  <img src="./pics/track_with_obs.png" align="center" width="32%">
+</p>
 
 ### Manually control the vehicle in the simulator
 
