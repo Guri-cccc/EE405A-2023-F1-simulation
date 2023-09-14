@@ -130,8 +130,8 @@ You can change the gazebo world map by modifying the 'world_name' argument in th
 You can choose world with and without the obstacels.
 
 <p align="center">
-  <img src="./pics/track.png" align="center" width="32%">
-  <img src="./pics/track_with_obs.png" align="center" width="32%">
+  <img src="./tutorial/pics/track.png" align="center" width="32%">
+  <img src="./tutorial/pics/track_with_obs.png" align="center" width="32%">
 </p>
 
 ### Manually control the vehicle in the simulator
@@ -149,5 +149,5 @@ Click the terminal where the keyboard_teleop node is running, and press your key
 
 ### Sensor inputs
 You can get RGB-pointcloud and omage topics from realsense D435 from the simulation.
-<img src="./pics/sensor_env.png" width="200">
-<img src="./pics/rviz_rqt.png" width="200">
+<img src="./tutorial/pics/sensor_env.png" width="200">
+<img src="./tutorial/pics/rviz_rqt.png" width="200">
