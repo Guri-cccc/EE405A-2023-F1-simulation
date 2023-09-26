@@ -67,6 +67,15 @@ The source for the required packages, including the simulator, are now in the wo
 
     pip2 install --user cython
 
+We checked that Cython version 0.29.24 is compatible. Try installing with 
+
+    pip2 install --user cython==0.29.24
+
+If you have problem installing with 
+
+    ./compile.sh
+
+in the next step
 There are two methods for installing the particle filter; with GPU support and without GPU support. We recommend using the package with GPU support, but leave the decision to you.
 
 **Installing with GPU Support**  
