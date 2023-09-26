@@ -115,10 +115,9 @@ In my case, I worked in the ```test_catkin_ws``` directory and I did:
 
 ### Run the simulator
 
-For using customized track as like oval-shaped track, you need to copy some files in ~/.gazebo/models (If you don't have the directory, run ```mkdir -p ~/.gazebo/models```)
-We generated oval track with CAD software and exported the CAD model into *.stl format.
+For using customized world, you need to copy some files in ~/.gazebo/models (If you don't have the directory, run ```mkdir -p ~/.gazebo/models```).
 
-    cp -r EE405_a_eurecar_f1_tenth_project/f1tenth-sim/world/oval_track ~/.gazebo/models
+    cp -r EE405_a_eurecar_f1_tenth_project/f1tenth-sim/world/race_track ~/.gazebo/models
 
 To run the simulator on its own, run:
 
