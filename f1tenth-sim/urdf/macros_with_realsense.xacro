@@ -310,9 +310,9 @@
   <!-- camera object -->
   <xacro:unless value="$(optenv DISABLE_GAZEBO_CAMERA false)">
     <xacro:include filename="$(find realsense_gazebo_plugin)/urdf/_d435.urdf.xacro" />
-    <sensor_d435 parent="$(arg robot_name)_chassis">
+    <xacro:sensor_d435 parent="$(arg robot_name)_chassis">
       <origin xyz="0.390 0 0.075" rpy="0 0 0"/>
-    </sensor_d435>
+    </xacro:sensor_d435>
   </xacro:unless>
 
   <!-- Gazebo references -->
