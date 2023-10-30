@@ -130,7 +130,7 @@ For using customized world, you need to copy some files in ~/.gazebo/models (If 
 
 To run the simulator on its own, run:
 
-    roslaunch f1tenth_sim simulator.launch
+    roslaunch f1tenth-sim simulator.launch
 
 This will launch everything you need for a full simulation; roscore, the simulator, a preselected map, a model of the racecar and the joystick server.
 
