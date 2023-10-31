@@ -166,5 +166,5 @@ You can get RGB-pointcloud and image topics from realsense D435 from the simulat
 <img src="./tutorial/pics/rviz_rqt.png" align="center" width="40%">
 
 ### Control imputs (direct control topic)
-You can control the car in the simultor by publishing **/car_1/command** which is ackermann_msgs/AckermannDrive type.
-You should control the car by giving **steering_angle** and **speed** values.
+You can control the car in the simultor by publishing "**/car_1/command**" which is "ackermann_msgs/AckermannDrive" type.
+You should control the car by giving "**steering_angle**" and "**speed**" values.
