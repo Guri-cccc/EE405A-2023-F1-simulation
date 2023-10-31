@@ -59,6 +59,8 @@ As a result, I did:
 
     cd ~/f1_ws/src
     git clone https://github.com/Guri-cccc/EE405A-2023-F1-simulation.git
+    cd EE405A-2023-F1-simulation
+    git checkout noetic
 
 
 
