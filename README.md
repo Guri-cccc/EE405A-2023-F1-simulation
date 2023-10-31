@@ -14,22 +14,22 @@ Also, this project provides gazebo simulator and messages.
 Therefore, it is a proper environment to implement such as vehicle control, simple mapping, and localization algorithm. We hope you to try whatever you want to test in this simulator. 
 
 As the class progresses, you can experience installing sensors required for algorithms in the vehicle and using them to integrate them into their own algorithms.
-We can modifiy the origin f1tenth model for you to use an IMU sensor, 2D LiDAR scanner, camera. 
+We can modifiy the origin f1tenth model for you to use a camera sensor with odometry. 
 Finally, we will use the same track model as the students experimenting on a real vehicle basis.
 
 ## Install guide
 
 ### ROS
 
-Until the last lesson, we have covered ROS installation and basic usage, so we will assume that have ```ros-melodic-desktop``` installed.
+Until the last lesson, we have covered ROS installation and basic usage, so we will assume that have ```ros-noetic-desktop``` installed.
 
-if you have not installed ```ros-melodic-desktop```, you can follow the instruction here:
-[ROS-melodic-installation/Ubuntu](http://wiki.ros.org/melodic/Installation/Ubuntu)
+if you have not installed ```ros-noetic-desktop```, you can follow the instruction here:
+[ROS-noetic-installation/Ubuntu](http://wiki.ros.org/noetic/Installation/Ubuntu)
 
 Also, you can follow the documentation to start ROS and set the environment to use ros-command comfortably.
 See this page: [ROS/StartGuide](http://wiki.ros.org/ROS/StartGuide)
 
-If you have ```ros-melodic-desktop``` installed, the additional dependencies you must install are:
+If you have ```ros-noetic-desktop``` installed, the additional dependencies you must install are:
 
 - tf2_geometry_msgs
 - ackermann_msgs
@@ -38,11 +38,11 @@ If you have ```ros-melodic-desktop``` installed, the additional dependencies you
 
 You can install them by running:
 
-    sudo apt-get install ros-melodic-tf2-geometry-msgs ros-melodic-ackermann-msgs ros-melodic-joy ros-melodic-map-server ros-melodic-teleop-twist-keyboard ros-melodic-navigation ros-melodic-teb-local-planner* ros-melodic-ros-control ros-melodic-ros-controllers ros-melodic-gazebo-ros-control ros-melodic-ackermann-msgs ros-melodic-serial qt4-default ros-melodic-effort-controllers
+    sudo apt-get install ros-noetic-tf2-geometry-msgs ros-noetic-ackermann-msgs ros-noetic-joy ros-noetic-map-server ros-noetic-teleop-twist-keyboard ros-noetic-navigation ros-noetic-teb-local-planner* ros-noetic-ros-control ros-noetic-ros-controllers ros-noetic-gazebo-ros-control ros-noetic-ackermann-msgs ros-noetic-serial qt4-default ros-noetic-effort-controllers
 
 The full list of dependencies can be found in the ```package.xml``` file.
 
-<img src="./tutorial/pics/dependency.png">
+<!-- <img src="./tutorial/pics/dependency.png"> -->
 
 ---------------------
 
@@ -62,7 +62,7 @@ As a result, I did:
 
 
 
-### For gazebo environment
+<!-- ### For gazebo environment
 The source for the required packages, including the simulator, are now in the workspace. The simulator depends on the GPU particle filter developed by the MIT RACECAR team and this package has to be configured before compiling the ROS packages. Navigate to the ```range_libc``` folder to compile the library necessary for the particle filter. Open a new terminal and enter the following commands:
 
     pip2 install --user cython
@@ -102,7 +102,7 @@ In the same terminal, enter the following command and follow the instructions in
 
     ./compile.sh
     
-<img src="./tutorial/pics/rangelib_install.png">
+<img src="./tutorial/pics/rangelib_install.png"> -->
 
 
 ### Simulator package installation    
@@ -126,16 +126,19 @@ In my case, I worked in the ```test_catkin_ws``` directory and I did:
 
 For using customized world, you need to copy some files in ~/.gazebo/models (If you don't have the directory, run ```mkdir -p ~/.gazebo/models```).
 
+For the race track environment (w/ and w/o obstacles), run the following commands 
+
     cp -r EE405_a_eurecar_f1_tenth_project/f1tenth-sim/world/race_track ~/.gazebo/models
+
+You can change the gazebo world map by modifying the 'world_name' argument in the simulator.launch file ('race_track' or 'race_track_obstacles').
+
+You can choose world with and without the obstacles.
 
 To run the simulator on its own, run:
 
     roslaunch f1tenth-sim simulator.launch
 
 This will launch everything you need for a full simulation; roscore, the simulator, a preselected map, a model of the racecar and the joystick server.
-
-You can change the gazebo world map by modifying the 'world_name' argument in the simulator.launch file.
-You can choose world with and without the obstacels.
 
 <p align="center">
   <img src="./tutorial/pics/track.png" align="center" width="40%">
