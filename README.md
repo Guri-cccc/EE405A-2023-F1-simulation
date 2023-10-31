@@ -158,7 +158,11 @@ Click the terminal where the keyboard_teleop node is running, and press your key
 - w a d s : forward, left, right, backward
 - space_bar : brake 
 
-### Sensor inputs
-You can get RGB-pointcloud and omage topics from realsense D435 from the simulation.
+### Sensor outputs
+You can get RGB-pointcloud and image topics from realsense D435 from the simulation.
 <img src="./tutorial/pics/sensor_env.png" align="center" width="40%">
 <img src="./tutorial/pics/rviz_rqt.png" align="center" width="40%">
+
+### Control imputs (direct control topic)
+You can control the car in the simultor by publishing "**/car_1/command**" which is "ackermann_msgs/AckermannDrive" type.
+You should control the car by giving "**steering_angle**" and "**speed**" values.
