@@ -112,11 +112,11 @@ Then run ```catkin_make``` to build it:
     catkin_make
     source devel/setup.bash
 
-In my case, I worked in the ```test_catkin_ws``` directory and I did:
+In my case, I worked in the ```f1_ws``` directory and I did:
 
     cd ~/f1_ws
     catkin_make
-    source ~/test_catkin_ws/devel/setup.bash
+    source ~/f1_ws/devel/setup.bash
         
 <img src="./tutorial/pics/install_complete.png">    
 
