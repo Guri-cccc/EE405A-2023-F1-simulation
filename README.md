@@ -130,7 +130,7 @@ For using customized world, you need to copy some files in ~/.gazebo/models (If 
 
 For the race track environment (w/ and w/o obstacles), run the following commands 
 
-    cp -r EE405_a_eurecar_f1_tenth_project/f1tenth-sim/world/race_track ~/.gazebo/models
+    cp -r EE405A-2023-F1-simulation/f1tenth-sim/world/race_track ~/.gazebo/models
 
 You can change the gazebo world map by modifying the 'world_name' argument in the simulator.launch file ('race_track' or 'race_track_obstacles').
 
@@ -146,6 +146,13 @@ This will launch everything you need for a full simulation; roscore, the simulat
   <img src="./tutorial/pics/track.png" align="center" width="40%">
   <img src="./tutorial/pics/track_with_obs.png" align="center" width="40%">
 </p>
+
+### Visualize data using rviz (load rviz config)
+
+```
+cd ~/catkin_ws/src/EE405A-2023-F1-simulation/rviz
+rviz -d car1_plan.rviz
+```
 
 ### Manually control the vehicle in the simulator
 
