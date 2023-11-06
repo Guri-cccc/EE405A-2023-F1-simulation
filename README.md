@@ -54,7 +54,7 @@ To install the simulator package, clone the repo with the simulator and starter 
     cd ~/catkin_ws/src
     git clone https://github.com/Guri-cccc/EE405A-2023-F1-simulation.git
     
-Personally, I installed the simulator package in the ```~/test_catkin_ws``` because I have installed other packages in the ```~/catkin_ws```. If you want to separate the workspace as I did, you can make a new directory as I created.
+Personally, I installed the simulator package in the ```~/f1_ws``` because I have installed other packages in the ```~/catkin_ws```. If you want to separate the workspace as I did, you can make a new directory as I created.
 As a result, I did: 
 
     cd ~/f1_ws/src
@@ -112,11 +112,11 @@ Then run ```catkin_make``` to build it:
     catkin_make
     source devel/setup.bash
 
-In my case, I worked in the ```test_catkin_ws``` directory and I did:
+In my case, I worked in the ```f1_ws``` directory and I did:
 
     cd ~/f1_ws
     catkin_make
-    source ~/test_catkin_ws/devel/setup.bash
+    source ~/f1_ws/devel/setup.bash
         
 <img src="./tutorial/pics/install_complete.png">    
 
@@ -126,7 +126,7 @@ In my case, I worked in the ```test_catkin_ws``` directory and I did:
 
 For using customized world, you need to copy some files in ~/.gazebo/models (If you don't have the directory, run ```mkdir -p ~/.gazebo/models```).
 
-For the race track environment (w/ and w/o obstacles), run the following commands
+For the race track environment (w/ and w/o obstacles), run the following commands 
 
     cp -r EE405_a_eurecar_f1_tenth_project/f1tenth-sim/world/race_track ~/.gazebo/models
 
