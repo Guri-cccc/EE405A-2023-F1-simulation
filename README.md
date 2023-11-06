@@ -62,7 +62,7 @@ As a result, I did:
 
 
 
-### For gazebo environment
+<!-- ### For gazebo environment
 The source for the required packages, including the simulator, are now in the workspace. The simulator depends on the GPU particle filter developed by the MIT RACECAR team and this package has to be configured before compiling the ROS packages. Navigate to the ```range_libc``` folder to compile the library necessary for the particle filter. Open a new terminal and enter the following commands:
 
     pip2 install --user cython
@@ -102,7 +102,7 @@ In the same terminal, enter the following command and follow the instructions in
 
     ./compile.sh
     
-<img src="./tutorial/pics/rangelib_install.png">
+<img src="./tutorial/pics/rangelib_install.png"> -->
 
 
 ### Simulator package installation    
@@ -126,7 +126,13 @@ In my case, I worked in the ```test_catkin_ws``` directory and I did:
 
 For using customized world, you need to copy some files in ~/.gazebo/models (If you don't have the directory, run ```mkdir -p ~/.gazebo/models```).
 
+For the race track environment (w/ and w/o obstacles), run the following commands
+
     cp -r EE405_a_eurecar_f1_tenth_project/f1tenth-sim/world/race_track ~/.gazebo/models
+
+You can change the gazebo world map by modifying the 'world_name' argument in the simulator.launch file ('race_track' or 'race_track_obstacles').
+
+You can choose world with and without the obstacles.
 
 To run the simulator on its own, run:
 
@@ -134,13 +140,17 @@ To run the simulator on its own, run:
 
 This will launch everything you need for a full simulation; roscore, the simulator, a preselected map, a model of the racecar and the joystick server.
 
-You can change the gazebo world map by modifying the 'world_name' argument in the simulator.launch file.
-You can choose world with and without the obstacels.
-
 <p align="center">
   <img src="./tutorial/pics/track.png" align="center" width="40%">
   <img src="./tutorial/pics/track_with_obs.png" align="center" width="40%">
 </p>
+
+### Visualize data using rviz (load rviz config)
+
+```
+cd ~/catkin_ws/src/EE405A-2023-F1-simulation/rviz
+rviz -d car1_plan.rviz
+```
 
 ### Manually control the vehicle in the simulator
 
@@ -155,7 +165,11 @@ Click the terminal where the keyboard_teleop node is running, and press your key
 - w a d s : forward, left, right, backward
 - space_bar : brake 
 
-### Sensor inputs
-You can get RGB-pointcloud and omage topics from realsense D435 from the simulation.
+### Sensor outputs
+You can get RGB-pointcloud and image topics from realsense D435 from the simulation.
 <img src="./tutorial/pics/sensor_env.png" align="center" width="40%">
 <img src="./tutorial/pics/rviz_rqt.png" align="center" width="40%">
+
+### Control imputs (direct control topic)
+You can control the car in the simultor by publishing ```/car_1/command``` which is ```ackermann_msgs/AckermannDrive``` type.
+You should control the car by giving ```steering_angle``` and ```speed``` values.
